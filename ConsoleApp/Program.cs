@@ -10,10 +10,8 @@ class Program
         //switch (consoleKey)
 
         int[] myArray = { 1123, 21, 345, 123, 51 };
-        for(int i = 0; i < myArray.Length; i++)
-        {
-            Console.WriteLine(myArray[i]);
-        }
+
+        Program.printArray(myArray);
         
         bool CPUTemperature = true;
         bool CPUFan = true;
@@ -25,6 +23,14 @@ class Program
         else
         {
             Console.WriteLine("CPU temperature critical!");
+        }
+    }
+
+    public static void printArray(int[] array)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            Console.WriteLine(array[i]);
         }
     }
 }
