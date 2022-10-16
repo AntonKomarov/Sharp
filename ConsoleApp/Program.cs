@@ -10,7 +10,7 @@ class Program
         //ConsoleKey consoleKey = Console.ReadKey().Key;
         //switch (consoleKey)
 
-        int[] myArray = { 1123, 21, 345, 123, 51, 12, 634, 41, 123, 85, 12, 1123 };
+        int[] myArray = { 1123, 21, 345, 41, 123, 51, 12, 634, 41, 123, 85, 12, 1123 };
 
         // Console.WriteLine(myArray.Where(i => i % 2 > 0).Min()); //минимальное, нечетное число
 
@@ -19,14 +19,39 @@ class Program
         // OrderBy(i => i) - сортировка массива по возрастанию
         // OrderByDescending(i => i) - сортировка массива по убыванию
         //int[] secondArray = myArray.Distinct().OrderBy(i => i).ToArray();
-        //Program.printArray(secondArray);
+        
 
         // сортировка массива по возрастанию с помощью статического метода Sort()
-        Array.Sort(myArray);
-        //поиск элемента с начала массива меньше 70, первый найденый элемент будет помешен в переменную
+        //Array.Sort(myArray);
+        //поиск элемента с начала массива меньше 70, первый найденый элемент будет помещен в переменную
         int result = Array.Find(myArray, i => i < 70);
-        //поиск элемента с конца массива меньше 70, первый найденый элемент будет помешен в переменную
-        int resulttwo = Array.FindLast(myArray, i => i < 70); 
+        //поиск элемента с конца массива меньше 70, первый найденый элемент будет помещен в переменную
+        int resultTwo = Array.FindLast(myArray, i => i < 70);
+        //поиск элементов с начала массива меньше 70, найденые элементы будут помещены в массив
+        int[] resultTree = Array.FindAll(myArray, i => i < 70);
+        //поиск элемента с начала массива равного 41, индекс первого найденого элемента будет помещен в переменную
+        //если элемета не существует в переменную помещается значение -1
+        int index = Array.FindIndex(myArray, i => i == 41);
+        //поиск элемента с конца массива равного 41, индекс первого найденого элемента будет помещен в переменную
+        int indexLast = Array.FindLastIndex(myArray, i => i == 41);
+        //элементы будут идти в обратном порядке
+        //Array.Reverse(myArray);
+
+        //методы из библиотеки Linq - более поздняя версия и более вариативная
+        int[] arrayLinq = myArray.Where(i => i < 70).ToArray();
+        //первое число меньше 70
+        int element = myArray.Where(i => i < 70).First();
+        //если элемент не найден получаем exeption (System.InvalidOperationExeption)
+        int elementExeption = myArray.Where(i => i == 0).First();
+        //если элемент не найден получаем деволтное значение для того эл-та данных которое мы ищем
+        int elementDefault = myArray.Where(i => i == 0).FirstOrDefault();
+
+
+        Program.printArray(myArray);
+
+
+
+
     }
 
     public static void printArray(int[] array)
