@@ -55,6 +55,7 @@ class Program
 
 
         Program.printArray(myArray);
+        Program.printArray(myArray);
 
 
 
