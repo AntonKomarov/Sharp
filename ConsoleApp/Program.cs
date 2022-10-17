@@ -47,8 +47,11 @@ class Program
         int elementDefault = myArray.Where(i => i == 0).FirstOrDefault();
 
 
-        // объявление и создание многомерного массива
+        // объявление и выделение памяти многомерного массива
         int[,] myMatrix = new int[3, 5];
+        int[,] myMatrix1 = new int[4, 5];
+        int[,] myMatrix2 = new int[3, 6];
+        int[,] myMatrix3 = new int[3, 5];
 
 
         Program.printArray(myArray);
