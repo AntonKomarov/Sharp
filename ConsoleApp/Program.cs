@@ -51,6 +51,8 @@ class Program
         int[,] myMatrix = new int[3, 5];
         
         Program.printArray(myArray);
+        Program.printArray(myArray);
+        Program.printArray(myArray);
 
     }
 
