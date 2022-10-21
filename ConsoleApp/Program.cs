@@ -56,8 +56,24 @@ class Program
         int[][] myTeethArray = new int[5][];
 
         int[] myArray1 = new int[5];
-        
-      
+        int[] myArray2 = new int[2];
+        int[] myArray3 = new int[7];
+        int[] myArray4 = new int[1];
+        int[] myArray5 = new int[9];
+
+        Random random = new Random();
+
+        for (int i = 0; i < myTeethArray.Length; i++)
+        {
+            for (int j = 0; j < myTeethArray[i].Length; j++)
+            {
+                
+            }
+
+        }
+
+
+
 
     }
 
