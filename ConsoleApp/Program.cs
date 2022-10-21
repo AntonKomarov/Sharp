@@ -51,6 +51,11 @@ class Program
         int[,] myMatrix = new int[3, 5];
         
         Program.printArray(myArray);
+
+        //ступенчатые(зубчатые) массивы
+        int[][] myTeethArray = new int[5][];
+
+        int[] myArray1 = new int[5];
         
       
 
