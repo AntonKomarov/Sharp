@@ -19,7 +19,6 @@ class Program
         // OrderBy(i => i) - сортировка массива по возрастанию
         // OrderByDescending(i => i) - сортировка массива по убыванию
         //int[] secondArray = myArray.Distinct().OrderBy(i => i).ToArray();
-        
 
         // сортировка массива по возрастанию с помощью статического метода Sort()
         //Array.Sort(myArray);
@@ -42,24 +41,22 @@ class Program
         //первое число меньше 70
         int element = myArray.Where(i => i < 70).First();
         //если элемент не найден получаем exeption (System.InvalidOperationExeption)
-        int elementExeption = myArray.Where(i => i == 0).First();
-        //если элемент не найден получаем деволтное значение для того эл-та данных которое мы ищем
+        //int elementExeption = myArray.Where(i => i == 0).First();
+        //если элемент не найден получаем дефолтное значение для того эл-та данных которое мы ищем
         int elementDefault = myArray.Where(i => i == 0).FirstOrDefault();
 
 
-        // объявление и выделение памяти многомерного массива
-        int[,] myMatrix = new int[3, 5];
-        
-        Program.printArray(myArray);
+        ////////////////////////////////////объявление и выделение памяти многомерного массива
+        int[,] myMatrix = new int[3, 5];   
 
-        //ступенчатые(зубчатые) массивы
+        ////////////////////////////////////ступенчатые(зубчатые) массивы
         int[][] myTeethArray = new int[5][];
 
-        int[] myArray1 = new int[5];
-        int[] myArray2 = new int[2];
-        int[] myArray3 = new int[7];
-        int[] myArray4 = new int[1];
-        int[] myArray5 = new int[9];
+        myTeethArray[0] = new int[5];
+        myTeethArray[1] = new int[2];
+        myTeethArray[2] = new int[7];
+        myTeethArray[3] = new int[1];
+        myTeethArray[4] = new int[9];
 
         Random random = new Random();
 
@@ -67,14 +64,21 @@ class Program
         {
             for (int j = 0; j < myTeethArray[i].Length; j++)
             {
-                
+                myTeethArray[i][j] = random.Next(100);
             }
-
         }
 
 
+        for (int i = 0; i < myTeethArray.Length; i++)
+        {
+            for (int j = 0; j < myTeethArray[i].Length; j++)
+            {
+                Console.Write(myTeethArray[i][j] + " ");
+            }
+            Console.WriteLine();
+        }
 
-
+       
     }
 
     public static void printArray(int[] array)
