@@ -99,6 +99,19 @@ class Program
             }
         };
 
+        for (int x = 0; x < myThirdArray.GetLength(0); x++)
+        {
+            for (int y = 0; y < myThirdArray.GetLength(1); y++)
+            {
+                for (int z = 0; z < myThirdArray.GetLength(2); z++)
+                {
+                    Console.Write(myThirdArray[x, y, z] + "\t");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+        }
+
 
 
 
