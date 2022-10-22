@@ -79,6 +79,29 @@ class Program
             }
             Console.WriteLine();
         }
+
+        //////////////////////////////////////трёхмерные массивы
+        int[,,] myThirdArray =
+        {
+            {
+                {12,23,46},
+                {32,74,12}
+            },
+
+            {
+                {31,67,31},
+                {42,22,53}
+            },
+
+            {
+                {34,52,12},
+                {11,53,84}
+            }
+        };
+
+
+
+
     }
 
     public static void printArray(int[] array)
@@ -88,5 +111,10 @@ class Program
             Console.WriteLine(array[i]);
         }
     }
+
+
+    
+
+    
 }
  
